@@ -8,7 +8,7 @@ import 'chartjs-adapter-moment';
 const BarChart = () => {
 
   useEffect(() => {
-    var ctx: any = document.getElementById('chart').getContext("2d");
+    var ctx: any = document.getElementById('chart');
     const labels = [
       4000000,
       5000000,
