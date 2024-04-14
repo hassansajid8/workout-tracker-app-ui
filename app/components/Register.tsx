@@ -12,9 +12,9 @@ const Register = () => {
             <input className='formInput' type='text' placeholder='Last Name' />
             <input className='formInput' type='email' placeholder='Email' />
             <input className='formInput' type='password' placeholder='Password' />
-            <label className='w-full text-xs flex items-center justify-between'>
+            <label className='w-full text-xs flex items-center'>
             <input type='checkbox' className='checkbox w-[22px] h-[22px]' />
-            By proceeding, I agree to all <a href="" className='text-blue underline'>T&C</a> and  <a href="" className='text-blue underline'>Privacy Policy</a>
+            <p className='mx-3'>By proceeding, I agree to all <a href="" className='text-blue underline mx-0'>T&C</a> and <a href="" className='text-blue underline'> Privacy Policy</a></p>
             </label>
         </form>
         <Link href="/a">
