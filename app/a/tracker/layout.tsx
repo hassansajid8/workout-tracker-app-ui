@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/app/globals.css";
+import Topbar from "@/app/components/Topbar";
+import Navbar from "@/app/components/Navbar";
+
 
 export const metadata: Metadata = {
   title: "Workout Tracker",
@@ -13,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Topbar />
+        <Navbar />
+        {children}
+        </body>
     </html>
   );
 }

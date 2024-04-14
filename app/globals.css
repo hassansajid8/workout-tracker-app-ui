@@ -1,33 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  max-width: 425px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@media (prefers-color-scheme: dark) {}
+
+*{
+  animation: fadeInAnimation ease 0.8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-family: "Montserrat", sans-serif;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.switch {
+  width: 40px;
+  height: 20px;
+  background-color: #8099FF;
+  display: flex;
+
+}
+
+.switch input{
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.switch input:checked .slider{
+  background-color: #8099FF;
+}
+
+.slider {
+  width: 15.71px;
+  height: 15.71px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.formInput{
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+  background-color: #F1F1F1;
+  margin: 15px auto;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.checkbox:checked{
+  accent-color: red;
 }
